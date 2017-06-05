@@ -22,10 +22,25 @@ bstNode.prototype.insert = function(val) {
       this.left.parent = this
     } else this.left.insert(val)
   }
+}
+
+bstNode.prototype.delete = function() {
+
 
 }
 
-bstNode.prototype.delete = function(val) {
+bstNode.prototype.breadthFirst = function() {
+  let q = [this]
+  let result = ''
+  let current
+}
 
+bstNode.prototype.contains = function() {
 
+}
+
+bstNode.prototype.lookup = function(val) {
+  if(val < this.val) this.left ? this.left.lookup(val) : null;
+  if(val > this.val) this.right ? this.right.lookup(val) : null;
+  return this;
 }
