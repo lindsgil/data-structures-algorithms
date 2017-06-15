@@ -66,3 +66,23 @@ BinarySearchTree.prototype.deleteMin = function(parent) {
   }
   if(this.left) this.left.deleteMin(this);
 };
+
+//Binary Search Tree deleting nodeMax()
+BinarySearchTree.prototype.deleteMax = function(parent) {
+  if(!this.right && !this.left) {
+    if(parent) {
+      parent.right = null;
+    } else {
+      this.value = null; //we want to addNode
+    }
+    else if (!this.right && this.left) {
+      if(parent) {
+        parent.right = this.left;
+      } else {
+        this.value = this.left.value;
+        this.left = this.left.left;
+      }
+    }
+    if(this.right) this.right.deleteMax(this);
+  }
+}

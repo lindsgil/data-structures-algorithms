@@ -15,6 +15,6 @@ Tree.prototype.addChild = function(value) {
 };
 
 let tree = new Tree(1);
-let branch1 = tree.addChild(2);
+let branch1 = tree.addChild(2).addChild(6);
 let branch2 = tree.addChild(3);
 let branch3 = tree.addChild(4);

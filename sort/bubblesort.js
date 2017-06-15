@@ -1,5 +1,7 @@
 'use strict';
 
+//adaptive: yes
+//Stable: no
 function bubbleSort(array) {
   //while wall > 0
   let wall = array.length; //first sorted element

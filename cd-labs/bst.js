@@ -85,4 +85,4 @@ bstNode.prototype.toArray = function() {
     result.push(node.value);
   });
   return result;
-}
+};

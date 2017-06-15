@@ -68,4 +68,4 @@ List.prototype.reduce = function(callback) {
     callback(sum, this[i], i, this);
   }
   return sum;
-}
+};
