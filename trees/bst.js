@@ -47,3 +47,22 @@ BinarySearchTree.prototype.traverseDepthFirst_postOrder = function(fn) {
   if (this.right) this.right.traverseDepthFirst_postOrder(fn);
   fn(this);
 };
+
+//Binary tree deleting nodeMin()
+BinarySearchTree.prototype.deleteMin = function(parent) {
+  if(!this.left && !this.right) {
+    if(parent) {
+      parent.left = null;
+    } else {
+      this.value = null;
+    }
+  } else if (!this.left && this.right) {
+    if(parent) {
+      parent.left = this.right;
+    } else {
+      this.value = this.right.value;
+      this.right = this.right.right;
+    }
+  }
+  if(this.left) this.left.deleteMin(this);
+};
