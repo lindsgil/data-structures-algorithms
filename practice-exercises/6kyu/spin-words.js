@@ -16,4 +16,11 @@ function spinWords(string){
 }
 
 // test cases
-Test.assertEquals(spinWords("Hey fellow warriors"), "Hey wollef sroirraw");
+Test.assertEquals(spinWords("Hey fellow basketballers"), "Hey wollef srellabteksab");
+
+//BEST PRACTICE // OPTIMIZED SOLUTION
+function spinWords(words){
+  return words.split(' ').map(function (word) {
+    return (word.length > 4) ? word.split('').reverse().join('') : word;
+  }).join(' ');
+}
