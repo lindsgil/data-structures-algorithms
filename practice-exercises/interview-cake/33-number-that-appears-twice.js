@@ -7,7 +7,7 @@ function findingDoubleNumber(array, n) {
   console.log(firstSum);
   var secondSum = array.reduce(function(a,b) {
     return a + b;
-  })
+  });
   return secondSum - firstSum;
 }
 
